@@ -4,7 +4,7 @@ function unlock() {
   if (password === "9540823706") {
     document.getElementById("message").innerText =
       "Access Granted!";
-    window.location.href = "tentive.html";
+    window.location.href = "main.html";
   } else {
     document.getElementById("message").innerText =
       "Incorrect Password!";
