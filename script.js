@@ -1,1 +1,1 @@
-document.getElementById("btn").href=assets.page;
+document.getElementById("btn").href=assets.pass;
