@@ -1,5 +1,6 @@
 const assets = {
 
-page: "pass.html" 
+page: "pass.html"
+home: "index.html"
 
 };
