@@ -2,7 +2,7 @@
 /* SUPABASE CONFIGURATION */
 
 const SUPABASE_URL = "https://krpvkdfghivmtlbpdjtp.supabase.co";
-const SUPABASE_KEY = "YOUR_SUPABASE_PUBLISHABLE_KEY";
+const SUPABASE_KEY = "sb_publishable_S8g3hyY42QQuhBOM8Z-NXw_NqOfjdzn";
 
 const client = window.supabase.createClient(
   SUPABASE_URL,
