@@ -1,0 +1,294 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  background:
+    radial-gradient(circle at 15% 10%, #123d75 0, transparent 35%),
+    radial-gradient(circle at 90% 85%, #30145c 0, transparent 35%),
+    #080d1c;
+  color: #fff;
+  padding: 20px;
+}
+
+.navbar {
+  max-width: 1100px;
+  margin: auto;
+  padding: 18px 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 23px;
+  font-weight: 800;
+  letter-spacing: .5px;
+}
+
+.logo span {
+  color: #38bdf8;
+}
+
+.nav-tag {
+  padding: 9px 15px;
+  border: 1px solid #334b70;
+  border-radius: 30px;
+  color: #7dd3fc;
+  font-size: 12px;
+}
+
+.hero {
+  text-align: center;
+  padding: 55px 10px 35px;
+}
+
+.hero small {
+  color: #38bdf8;
+  letter-spacing: 3px;
+  font-weight: bold;
+}
+
+.hero h1 {
+  font-size: clamp(32px, 7vw, 55px);
+  margin: 17px 0;
+  line-height: 1.15;
+}
+
+.hero h1 span {
+  color: #38bdf8;
+}
+
+.hero p {
+  color: #a5b4cc;
+  line-height: 1.7;
+  font-size: 14px;
+}
+
+.upload-card {
+  max-width: 570px;
+  margin: 0 auto;
+  padding: 28px;
+  background: rgba(19, 31, 55, .85);
+  border: 1px solid rgba(125, 211, 252, .2);
+  border-radius: 24px;
+  box-shadow: 0 25px 80px #0007;
+  backdrop-filter: blur(15px);
+}
+
+.card-title {
+  font-size: 19px;
+  margin-bottom: 8px;
+}
+
+.card-subtitle {
+  color: #94a3b8;
+  font-size: 13px;
+  margin-bottom: 23px;
+}
+
+.drop-zone {
+  border: 2px dashed #42648c;
+  border-radius: 17px;
+  padding: 35px 15px;
+  text-align: center;
+  background: #0c1930;
+  cursor: pointer;
+  transition: .25s;
+}
+
+.drop-zone:hover,
+.drop-zone.active {
+  border-color: #38bdf8;
+  background: #112b49;
+}
+
+.upload-icon {
+  width: 65px;
+  height: 65px;
+  margin: 0 auto 15px;
+  display: grid;
+  place-items: center;
+  border-radius: 18px;
+  background: #12385d;
+  font-size: 30px;
+}
+
+.drop-zone h3 {
+  font-size: 17px;
+  margin-bottom: 9px;
+}
+
+.drop-zone p {
+  color: #94a3b8;
+  font-size: 12px;
+}
+
+.browse {
+  display: inline-block;
+  color: #38bdf8;
+  margin-top: 12px;
+  font-weight: bold;
+  font-size: 13px;
+}
+
+#imageFile {
+  display: none;
+}
+
+.preview-box {
+  display: none;
+  margin-top: 20px;
+  background: #0c1930;
+  border-radius: 15px;
+  padding: 12px;
+}
+
+.preview-box img {
+  width: 100%;
+  max-height: 270px;
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+.file-info {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 12px;
+  font-size: 12px;
+  color: #94a3b8;
+  overflow-wrap: anywhere;
+}
+
+.upload-btn {
+  width: 100%;
+  padding: 16px;
+  border: none;
+  border-radius: 12px;
+  margin-top: 22px;
+  background: linear-gradient(110deg, #0284c7, #2563eb);
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: .2s;
+}
+
+.upload-btn:hover {
+  filter: brightness(1.2);
+  transform: translateY(-2px);
+}
+
+.upload-btn:disabled {
+  opacity: .55;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.status {
+  margin-top: 16px;
+  font-size: 13px;
+  text-align: center;
+  color: #94a3b8;
+  overflow-wrap: anywhere;
+}
+
+.result {
+  display: none;
+  margin-top: 20px;
+  padding: 16px;
+  background: #0b2030;
+  border: 1px solid #17604c;
+  border-radius: 13px;
+}
+
+.result h3 {
+  color: #4ade80;
+  font-size: 15px;
+  margin-bottom: 12px;
+}
+
+.result input {
+  width: 100%;
+  padding: 12px;
+  background: #081426;
+  color: #7dd3fc;
+  border: 1px solid #334155;
+  border-radius: 8px;
+  outline: none;
+  font-size: 12px;
+}
+
+.copy-btn {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  background: #166534;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.features {
+  max-width: 850px;
+  margin: 55px auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+
+.feature {
+  padding: 20px 12px;
+  background: #111d32;
+  border: 1px solid #263b59;
+  border-radius: 15px;
+  text-align: center;
+}
+
+.feature-icon {
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+
+.feature h3 {
+  font-size: 13px;
+  margin-bottom: 7px;
+}
+
+.feature p {
+  font-size: 11px;
+  color: #94a3b8;
+  line-height: 1.5;
+}
+
+footer {
+  text-align: center;
+  padding: 25px 10px;
+  border-top: 1px solid #263449;
+  color: #718096;
+  font-size: 12px;
+}
+
+@media(max-width: 550px) {
+  .upload-card {
+    padding: 19px;
+  }
+
+  .features {
+    grid-template-columns: 1fr;
+    margin-top: 35px;
+  }
+
+  .hero {
+    padding-top: 38px;
+  }
+}
+

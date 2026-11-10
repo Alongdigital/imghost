@@ -1,0 +1,104 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#080d1c">
+<title>Rajput Image Hosting</title>
+
+</head>
+<link rel="stylesheet" href="style.css">
+
+<body>
+
+<header class="navbar">
+  <div class="logo">Along Digital<span>SR digihost</span></div>
+  <div class="nav-tag">✦ IMAGE HOSTING</div>
+</header>
+
+<section class="hero">
+  <small>WELCOME TO SR DIGIHOST</small>
+  <h1>Host Your Images.<br>
+    <span>Share Everywhere.</span>
+  </h1>
+  <p>
+    Upload your images and generate shareable image URLs.
+    Fast, simple and convenient.
+  </p>
+</section>
+
+<main class="upload-card">
+
+  <h2 class="card-title">Upload Your Image</h2>
+  <p class="card-subtitle">
+    Select an image from your device or drag it here.
+  </p>
+
+  <div class="drop-zone" id="dropZone">
+    <div class="upload-icon">☁️</div>
+    <h3>Drop your image here</h3>
+    <p>PNG, JPG, WEBP • Maximum 5 MB</p>
+    <span class="browse">Browse Files →</span>
+  </div>
+
+  <input type="file" id="imageFile"
+    accept="image/jpeg,image/png,image/webp,image/gif">
+
+  <div class="preview-box" id="previewBox">
+    <img id="preview" alt="Selected image preview">
+    <div class="file-info">
+      <span id="fileName"></span>
+      <span id="fileSize"></span>
+    </div>
+  </div>
+
+  <button class="upload-btn" id="uploadBtn">
+    ↑ Upload Image
+  </button>
+
+  <p class="status" id="status">
+    Ready to upload your image.
+  </p>
+
+  <div class="result" id="result">
+    <h3>✓ Image Uploaded Successfully!</h3>
+    <input id="imageURL" readonly>
+    <button class="copy-btn" id="copyBtn">
+      Copy Image URL
+    </button>
+  </div>
+
+</main>
+
+<section class="features">
+
+  <div class="feature">
+    <div class="feature-icon">⚡</div>
+    <h3>Quick Upload</h3>
+    <p>Upload your images in a few simple steps.</p>
+  </div>
+
+  <div class="feature">
+    <div class="feature-icon">🔗</div>
+    <h3>Shareable Links</h3>
+    <p>Get a public URL for your uploaded image.</p>
+  </div>
+
+  <div class="feature">
+    <div class="feature-icon">☁️</div>
+    <h3>Cloud Storage</h3>
+    <p>Images are stored using Supabase Storage.</p>
+  </div>
+
+</section>
+
+<footer>
+  © 2026 Rajput Host. All Rights Reserved.
+  <p style="margin-top:8px">Powered by Supabase</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</body>
+<script src="script.js"></script>
+</html>
