@@ -1,7 +1,7 @@
-supabase-js@2"></script>
+"use strict";
 /* SUPABASE CONFIGURATION */
 
-const SUPABASE_URL = "YOUR_SUPABASE_PROJECT_URL";
+const SUPABASE_URL = "https://krpvkdfghivmtlbpdjtp.supabase.co";
 const SUPABASE_KEY = "YOUR_SUPABASE_PUBLISHABLE_KEY";
 
 const client = window.supabase.createClient(
