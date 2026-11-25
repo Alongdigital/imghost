@@ -15,7 +15,7 @@ const ASSETS = {
     home: "index.html",
     images: "image-hosting.html",
     documents: "document-hosting.html",
-    ai: "ai-assistant.html",
+    ai: "Mr-Bot.html",
     manager: "file-manager.html",
     about: "about.html"
   },
