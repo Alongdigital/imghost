@@ -1,0 +1,305 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#101827">
+
+  <title>Document Hosting | Along Digital</title>
+
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="document-hosting.css">
+</head>
+
+<body>
+
+  <div class="app-container">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar" id="sidebar">
+
+      <div class="brand">
+        <div class="brand-logo">AD</div>
+        <div class="brand-info">
+          <h2>Along Digital</h2>
+          <span>File Hosting</span>
+        </div>
+      </div>
+
+      <nav class="sidebar-nav">
+
+        <a href="../index.html" class="nav-link">
+          <span>⌂</span> Dashboard
+        </a>
+
+        <a href="image-hosting.html" class="nav-link">
+          <span>▧</span> Image Hosting
+        </a>
+
+        <a href="document-hosting.html" class="nav-link active">
+          <span>▤</span> Document Hosting
+        </a>
+
+        <a href="file-manager.html" class="nav-link">
+          <span>▣</span> File Manager
+        </a>
+
+        <a href="ai-assistant.html" class="nav-link">
+          <span>✦</span> AI Assistant
+        </a>
+
+      </nav>
+
+      <div class="sidebar-bottom">
+        <p>© 2026 Along Digital</p>
+        <small>All Rights Reserved</small>
+      </div>
+
+    </aside>
+
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+
+      <!-- TOPBAR -->
+      <header class="topbar">
+
+        <button class="menu-btn" id="menuBtn">☰</button>
+
+        <div class="topbar-title">
+          <h2>Document Hosting</h2>
+          <p>Upload and manage your documents</p>
+        </div>
+
+        <button class="theme-btn" id="themeToggle">
+          ◐
+        </button>
+
+      </header>
+
+
+      <!-- PAGE CONTENT -->
+      <section class="page-content">
+
+        <div class="page-heading">
+          <div>
+            <h1>Document Hosting</h1>
+            <p>Store documents and generate shareable download URLs.</p>
+          </div>
+
+          <span class="status-label" id="connectionStatus">
+            Backend Not Connected
+          </span>
+        </div>
+
+
+        <!-- STATS -->
+        <div class="stats-grid">
+
+          <div class="stat-card">
+            <span>Total Documents</span>
+            <h2 id="totalDocuments">0</h2>
+            <small>Uploaded documents</small>
+          </div>
+
+          <div class="stat-card">
+            <span>Storage Used</span>
+            <h2 id="documentStorage">0 MB</h2>
+            <small>Total document storage</small>
+          </div>
+
+          <div class="stat-card">
+            <span>Last Upload</span>
+            <h2 id="lastUpload">--</h2>
+            <small>Recent activity</small>
+          </div>
+
+        </div>
+
+
+        <!-- UPLOAD SECTION -->
+        <div class="document-layout">
+
+          <div class="upload-card">
+
+            <div class="section-heading">
+              <h2>Upload Document</h2>
+              <p>Select a document from your device.</p>
+            </div>
+
+            <div class="document-drop-zone" id="documentDropZone">
+
+              <div class="upload-icon">⇧</div>
+
+              <h3>Drag & Drop Document</h3>
+
+              <p>Or browse files from your device</p>
+
+              <button type="button" id="selectDocumentBtn">
+                Browse Documents
+              </button>
+
+              <small>
+                PDF, DOC, DOCX, TXT, PPT, PPTX, XLS, XLSX, ZIP
+              </small>
+
+              <input
+                type="file"
+                id="documentInput"
+                accept=".pdf,.doc,.docx,.txt,.ppt,.pptx,.xls,.xlsx,.zip"
+                hidden
+              >
+
+            </div>
+
+
+            <!-- SELECTED DOCUMENT -->
+            <div class="selected-document" id="selectedDocument">
+
+              <div class="document-icon" id="documentIcon">PDF</div>
+
+              <div class="document-info">
+                <h3 id="documentName">Document Name</h3>
+                <p id="documentDetails">File details</p>
+              </div>
+
+              <button
+                type="button"
+                id="removeDocumentBtn"
+                title="Remove document"
+              >
+                ✕
+              </button>
+
+            </div>
+
+
+            <!-- UPLOAD BUTTON -->
+            <div class="upload-actions">
+
+              <div id="uploadStatus" class="upload-status">
+                Select a document to continue.
+              </div>
+
+              <button
+                type="button"
+                id="uploadDocumentBtn"
+                disabled
+              >
+                Upload Document
+              </button>
+
+            </div>
+
+          </div>
+
+
+          <!-- PREVIEW CARD -->
+          <div class="document-preview-card">
+
+            <div class="section-heading">
+              <h2>Document Preview</h2>
+              <p>Review your selected document.</p>
+            </div>
+
+            <div class="document-preview" id="documentPreview">
+
+              <div class="empty-document">
+                <div class="empty-icon">▤</div>
+                <h3>No Document Selected</h3>
+                <p>Your selected document details will appear here.</p>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <!-- URL RESULT -->
+        <div class="document-url-card" id="documentURLSection">
+
+          <div class="section-heading">
+            <h2>Document Download URL</h2>
+            <p>Copy the URL to use your document on another website.</p>
+          </div>
+
+          <div class="url-input-group">
+
+            <input
+              type="text"
+              id="documentURL"
+              placeholder="Your document URL will appear here..."
+              readonly
+            >
+
+            <button type="button" id="copyDocumentURLBtn">
+              Copy URL
+            </button>
+
+          </div>
+
+          <div class="document-code-box">
+
+            <label>HTML Download Link</label>
+
+            <textarea
+              id="documentHTMLCode"
+              readonly
+              placeholder="Your HTML code will appear here..."
+            ></textarea>
+
+            <button type="button" id="copyDocumentHTMLBtn">
+              Copy HTML Code
+            </button>
+
+          </div>
+
+        </div>
+
+
+        <!-- RECENT DOCUMENTS -->
+        <div class="recent-documents-card">
+
+          <div class="recent-heading">
+            <div>
+              <h2>Recent Documents</h2>
+              <p>Your recently uploaded documents.</p>
+            </div>
+
+            <button type="button" id="refreshDocumentsBtn">
+              ↻ Refresh
+            </button>
+          </div>
+
+          <div class="recent-documents-grid" id="recentDocumentsGrid">
+
+            <div class="empty-documents">
+              <div>▤</div>
+              <h3>No Documents Yet</h3>
+              <p>Uploaded documents will appear here.</p>
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+    </main>
+
+  </div>
+
+
+  <!-- TOAST -->
+  <div class="toast" id="toast"></div>
+
+
+  <!-- SCRIPTS -->
+  <script src="../assets.js"></script>
+  <script src="document-hosting.js"></script>
+
+</body>
+</html>

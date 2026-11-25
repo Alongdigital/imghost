@@ -1,0 +1,266 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#101827">
+
+  <title>File Manager | Along Digital</title>
+
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="file-manager.css">
+</head>
+
+<body>
+
+  <div class="app-container">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar" id="sidebar">
+
+      <div class="brand">
+        <div class="brand-logo">AD</div>
+
+        <div class="brand-info">
+          <h2>Along Digital</h2>
+          <span>File Hosting</span>
+        </div>
+      </div>
+
+      <nav class="sidebar-nav">
+
+        <a href="../index.html" class="nav-link">
+          <span>⌂</span> Dashboard
+        </a>
+
+        <a href="image-hosting.html" class="nav-link">
+          <span>▧</span> Image Hosting
+        </a>
+
+        <a href="document-hosting.html" class="nav-link">
+          <span>▤</span> Document Hosting
+        </a>
+
+        <a href="file-manager.html" class="nav-link active">
+          <span>▣</span> File Manager
+        </a>
+
+        <a href="ai-assistant.html" class="nav-link">
+          <span>✦</span> AI Assistant
+        </a>
+
+      </nav>
+
+      <div class="sidebar-bottom">
+        <p>© 2026 Along Digital</p>
+        <small>All Rights Reserved</small>
+      </div>
+
+    </aside>
+
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+
+      <!-- TOPBAR -->
+      <header class="topbar">
+
+        <button class="menu-btn" id="menuBtn">☰</button>
+
+        <div class="topbar-title">
+          <h2>File Manager</h2>
+          <p>Manage all your hosted files</p>
+        </div>
+
+        <button class="theme-btn" id="themeToggle">
+          ◐
+        </button>
+
+      </header>
+
+
+      <!-- PAGE CONTENT -->
+      <section class="page-content">
+
+        <div class="page-heading">
+
+          <div>
+            <h1>My Files</h1>
+            <p>Manage your images and documents from one place.</p>
+          </div>
+
+          <button type="button" id="refreshFilesBtn">
+            ↻ Refresh Files
+          </button>
+
+        </div>
+
+
+        <!-- STATISTICS -->
+        <div class="stats-grid">
+
+          <div class="stat-card">
+            <span>Total Files</span>
+            <h2 id="totalFiles">0</h2>
+            <small>All hosted files</small>
+          </div>
+
+          <div class="stat-card">
+            <span>Images</span>
+            <h2 id="totalImages">0</h2>
+            <small>Hosted images</small>
+          </div>
+
+          <div class="stat-card">
+            <span>Documents</span>
+            <h2 id="totalDocuments">0</h2>
+            <small>Hosted documents</small>
+          </div>
+
+          <div class="stat-card">
+            <span>Storage Used</span>
+            <h2 id="totalStorage">0 MB</h2>
+            <small>Total storage usage</small>
+          </div>
+
+        </div>
+
+
+        <!-- STORAGE OVERVIEW -->
+        <div class="storage-card">
+
+          <div class="storage-heading">
+            <div>
+              <h2>Storage Overview</h2>
+              <p>Your file storage summary</p>
+            </div>
+
+            <span id="storagePercentage">0%</span>
+          </div>
+
+          <div class="storage-progress">
+            <div
+              class="storage-progress-fill"
+              id="storageProgressFill"
+            ></div>
+          </div>
+
+          <div class="storage-details">
+
+            <span>Images: <b id="imageStorageSize">0 MB</b></span>
+
+            <span>Documents: <b id="documentStorageSize">0 MB</b></span>
+
+          </div>
+
+        </div>
+
+
+        <!-- SEARCH AND FILTER -->
+        <div class="file-controls">
+
+          <div class="file-search">
+            <span>⌕</span>
+
+            <input
+              type="search"
+              id="fileSearch"
+              placeholder="Search files by name..."
+            >
+          </div>
+
+          <select id="fileTypeFilter">
+            <option value="all">All Files</option>
+            <option value="image">Images</option>
+            <option value="document">Documents</option>
+          </select>
+
+          <select id="fileSort">
+            <option value="newest">Newest First</option>
+            <option value="oldest">Oldest First</option>
+            <option value="name">Name A-Z</option>
+          </select>
+
+        </div>
+
+
+        <!-- FILE LIST -->
+        <div class="files-card">
+
+          <div class="files-heading">
+
+            <div>
+              <h2>All Hosted Files</h2>
+              <p id="fileCountLabel">Showing 0 files</p>
+            </div>
+
+          </div>
+
+
+          <div class="files-table-wrapper">
+
+            <table class="files-table">
+
+              <thead>
+                <tr>
+                  <th>File</th>
+                  <th>Type</th>
+                  <th>Size</th>
+                  <th>Date</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+
+              <tbody id="filesTableBody">
+
+                <tr>
+                  <td colspan="5" class="empty-files">
+                    <div>▣</div>
+                    <h3>No Files Found</h3>
+                    <p>Your hosted files will appear here.</p>
+                  </td>
+                </tr>
+
+              </tbody>
+
+            </table>
+
+          </div>
+
+        </div>
+
+
+        <!-- INFORMATION -->
+        <div class="manager-note">
+
+          <span>ⓘ</span>
+
+          <div>
+            <h3>File Manager Information</h3>
+            <p>
+              Images and documents uploaded through Along Digital
+              will appear here after the Supabase database connection
+              is configured.
+            </p>
+          </div>
+
+        </div>
+
+      </section>
+
+    </main>
+
+  </div>
+
+
+  <!-- TOAST -->
+  <div class="toast" id="toast"></div>
+
+
+  <!-- SCRIPTS -->
+  <script src="../assets.js"></script>
+  <script src="file-manager.js"></script>
+
+</body>
+</html>

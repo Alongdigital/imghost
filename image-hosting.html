@@ -1,0 +1,388 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#080f1d">
+
+  <title>Image Hosting | Along Digital</title>
+
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="image-hosting.css">
+</head>
+
+<body>
+
+<div class="app">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar" id="sidebar">
+
+    <a href="../index.html" class="brand">
+      <div class="brand-logo">AD</div>
+      <div>
+        <h2>Along Digital</h2>
+        <small>File Hosting Platform</small>
+      </div>
+    </a>
+
+    <div class="nav-label">WORKSPACE</div>
+
+    <nav class="navigation">
+
+      <a href="../index.html" class="nav-link">
+        <span>▦</span> Dashboard
+      </a>
+
+      <a href="image-hosting.html" class="nav-link active">
+        <span>▧</span> Image Hosting
+      </a>
+
+      <a href="document-hosting.html" class="nav-link">
+        <span>▤</span> Document Hosting
+      </a>
+
+      <a href="file-manager.html" class="nav-link">
+        <span>▣</span> File Manager
+      </a>
+
+      <a href="ai-assistant.html" class="nav-link">
+        <span>✧</span> AI Assistant
+      </a>
+
+    </nav>
+
+    <div class="sidebar-bottom">
+      <div class="storage-card">
+        <span class="storage-icon">☁</span>
+        <h3>Your cloud space</h3>
+        <p>Manage your digital files in one place.</p>
+        <div class="storage-line">
+          <span>Image Storage</span>
+          <span>--</span>
+        </div>
+        <div class="progress">
+          <div></div>
+        </div>
+        <small>Connect your storage to see usage.</small>
+      </div>
+
+      <div class="sidebar-footer">
+        © 2026 Along Digital
+      </div>
+    </div>
+
+  </aside>
+
+  <!-- MAIN CONTENT -->
+  <main class="main-content">
+
+    <!-- TOPBAR -->
+    <header class="topbar">
+
+      <div class="top-left">
+        <button class="menu-btn" id="menuBtn">☰</button>
+
+        <div>
+          <span class="breadcrumb">Workspace / Hosting /</span>
+          <strong>Image Hosting</strong>
+        </div>
+      </div>
+
+      <div class="top-actions">
+
+        <button class="theme-btn" id="themeBtn">
+          ☀ Light mode
+        </button>
+
+        <div class="profile">
+          <div class="avatar">AD</div>
+
+          <div class="profile-info">
+            <strong>Guest User</strong>
+            <small>Image Workspace</small>
+          </div>
+        </div>
+
+      </div>
+
+    </header>
+
+    <!-- DASHBOARD -->
+    <section class="dashboard image-dashboard">
+
+      <!-- PAGE INTRO -->
+      <div class="page-intro">
+
+        <div>
+          <span class="section-label">IMAGE MANAGEMENT</span>
+
+          <h1>Image Hosting</h1>
+
+          <p>
+            Upload, host and manage your images.
+            Generate direct URLs for your websites.
+          </p>
+        </div>
+
+        <div class="image-page-icon">▧</div>
+
+      </div>
+
+      <!-- IMAGE STATISTICS -->
+      <div class="stats-grid image-stats">
+
+        <div class="stat-card">
+          <div class="stat-icon blue">▧</div>
+          <div>
+            <span>Total Images</span>
+            <h3 id="totalImages">--</h3>
+            <small>Hosted images</small>
+          </div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-icon cyan">☁</div>
+          <div>
+            <span>Storage Used</span>
+            <h3 id="imageStorage">--</h3>
+            <small>Image storage</small>
+          </div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-icon purple">↗</div>
+          <div>
+            <span>Last Upload</span>
+            <h3 id="lastUpload">--</h3>
+            <small>Upload activity</small>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- UPLOAD SECTION -->
+      <section class="image-upload-section">
+
+        <div class="section-heading">
+          <div>
+            <span class="section-label">NEW UPLOAD</span>
+            <h2>Upload your image</h2>
+            <p>Select an image from your device.</p>
+          </div>
+        </div>
+
+        <div class="upload-layout">
+
+          <!-- UPLOAD BOX -->
+          <div class="upload-panel">
+
+            <div class="drop-zone" id="dropZone">
+
+              <input
+                type="file"
+                id="imageInput"
+                accept="image/jpeg,image/png,image/webp,image/gif"
+                hidden
+              >
+
+              <div class="upload-symbol">↑</div>
+
+              <h3>Drop your image here</h3>
+
+              <p>
+                or select an image from your device
+              </p>
+
+              <button type="button" class="primary-btn" id="selectImageBtn">
+                Choose Image
+              </button>
+
+              <small>
+                Supported: JPG, PNG, WEBP, GIF
+              </small>
+
+              <small>
+                Maximum file size will be configured on the backend.
+              </small>
+
+            </div>
+
+            <!-- FILE INFORMATION -->
+            <div class="selected-file" id="selectedFile" hidden>
+
+              <div class="selected-file-header">
+                <strong>Selected Image</strong>
+                <button type="button" id="removeImageBtn">✕</button>
+              </div>
+
+              <div class="file-details">
+
+                <div class="file-preview">
+                  <img id="previewImage" src="" alt="Selected image preview">
+                </div>
+
+                <div class="file-info">
+                  <h4 id="fileName">Image name</h4>
+                  <p id="fileSize">File size</p>
+                  <p id="fileType">File type</p>
+                </div>
+
+              </div>
+
+            </div>
+
+            <!-- UPLOAD ACTION -->
+            <div class="upload-actions">
+
+              <button
+                type="button"
+                class="primary-btn upload-btn"
+                id="uploadImageBtn"
+                disabled
+              >
+                Upload Image →
+              </button>
+
+              <p id="uploadStatus">
+                Select an image to continue.
+              </p>
+
+            </div>
+
+          </div>
+
+          <!-- PREVIEW PANEL -->
+          <div class="preview-panel">
+
+            <div class="preview-heading">
+              <h3>Image Preview</h3>
+              <span>LIVE PREVIEW</span>
+            </div>
+
+            <div class="preview-container" id="previewContainer">
+
+              <div class="empty-preview" id="emptyPreview">
+                <div>▧</div>
+                <p>Your image preview will appear here.</p>
+              </div>
+
+              <img
+                id="largePreview"
+                src=""
+                alt="Large image preview"
+                hidden
+              >
+
+            </div>
+
+            <div class="preview-footer">
+              <span>Image Hosting</span>
+              <span>Along Digital</span>
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+      <!-- GENERATED URL -->
+      <section class="url-section" id="urlSection" hidden>
+
+        <div class="section-heading">
+          <div>
+            <span class="section-label">UPLOAD RESULT</span>
+            <h2>Your image URL</h2>
+            <p>Use this URL in your HTML websites.</p>
+          </div>
+        </div>
+
+        <div class="url-card">
+
+          <div class="url-success">
+            <span>✓</span>
+            <strong>Image uploaded successfully</strong>
+          </div>
+
+          <label for="imageURL">Public Image URL</label>
+
+          <div class="url-input-group">
+
+            <input
+              type="text"
+              id="imageURL"
+              readonly
+              placeholder="Your image URL will appear here"
+            >
+
+            <button type="button" id="copyURLBtn">
+              Copy URL
+            </button>
+
+          </div>
+
+          <div class="url-usage">
+            <strong>HTML Usage</strong>
+
+            <pre><code id="htmlCode">&lt;img src="YOUR_IMAGE_URL" alt="My Image"&gt;</code></pre>
+
+            <button type="button" id="copyHTMLBtn">
+              Copy HTML Code
+            </button>
+          </div>
+
+        </div>
+
+      </section>
+
+      <!-- RECENT IMAGES -->
+      <section class="recent-images-section">
+
+        <div class="section-heading">
+          <div>
+            <span class="section-label">YOUR LIBRARY</span>
+            <h2>Recent Images</h2>
+            <p>Your recently hosted images will appear here.</p>
+          </div>
+
+          <button type="button" class="outline-btn" id="refreshImagesBtn">
+            ↻ Refresh
+          </button>
+        </div>
+
+        <div class="recent-images-grid" id="recentImagesGrid">
+
+          <div class="empty-library">
+            <div>▧</div>
+            <h3>No images found</h3>
+            <p>Your uploaded images will appear here.</p>
+          </div>
+
+        </div>
+
+      </section>
+
+      <!-- FOOTER -->
+      <footer class="footer">
+        <span>© 2026 Along Digital. All rights reserved.</span>
+        <span>Designed by Along Digital</span>
+      </footer>
+
+    </section>
+
+  </main>
+
+</div>
+
+<div class="toast" id="toast"></div>
+
+<!-- SHARED CONFIGURATION -->
+<script src="../assets.js"></script>
+
+<!-- PAGE JAVASCRIPT -->
+<script src="image-hosting.js"></script>
+
+</body>
+</html>

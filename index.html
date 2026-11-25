@@ -1,0 +1,313 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0a1222">
+
+  <title>Along Digital | File Hosting</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="app">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar" id="sidebar">
+
+    <a href="index.html" class="brand">
+      <div class="brand-logo">AD</div>
+      <div>
+        <h2>Along Digital</h2>
+        <small>File Hosting Platform</small>
+      </div>
+    </a>
+
+    <div class="nav-label">WORKSPACE</div>
+
+    <nav class="navigation">
+      <a href="index.html" class="nav-link active">
+        <span>▦</span> Dashboard
+      </a>
+
+      <a href="#" class="nav-link" data-page="images">
+        <span>▧</span> Image Hosting
+      </a>
+
+      <a href="#" class="nav-link" data-page="documents">
+        <span>▤</span> Document Hosting
+      </a>
+
+      <a href="#" class="nav-link" data-page="manager">
+        <span>▣</span> File Manager
+      </a>
+
+      <a href="#" class="nav-link" data-page="ai">
+        <span>✧</span> AI Assistant
+      </a>
+    </nav>
+
+    <div class="sidebar-bottom">
+      <div class="storage-card">
+        <span class="storage-icon">☁</span>
+        <h3>Your cloud space</h3>
+        <p>Manage your digital files in one place.</p>
+        <div class="storage-line">
+          <span>Storage overview</span>
+          <span>--</span>
+        </div>
+        <div class="progress">
+          <div></div>
+        </div>
+        <small>Connect your storage to see usage.</small>
+      </div>
+
+      <div class="sidebar-footer">
+        © 2026 Along Digital
+      </div>
+    </div>
+
+  </aside>
+
+  <!-- MAIN CONTENT -->
+  <main class="main-content">
+
+    <!-- TOPBAR -->
+    <header class="topbar">
+
+      <div class="top-left">
+        <button class="menu-btn" id="menuBtn">☰</button>
+
+        <div>
+          <span class="breadcrumb">Workspace /</span>
+          <strong>Dashboard</strong>
+        </div>
+      </div>
+
+      <div class="top-actions">
+        <button class="theme-btn" id="themeBtn">
+          ☀ Light mode
+        </button>
+
+        <div class="profile">
+          <div class="avatar">AD</div>
+          <div class="profile-info">
+            <strong>Guest User</strong>
+            <small>Welcome aboard</small>
+          </div>
+        </div>
+      </div>
+
+    </header>
+
+    <!-- PAGE -->
+    <section class="dashboard">
+
+      <!-- HERO -->
+      <section class="hero">
+
+        <div class="hero-content">
+          <span class="eyebrow">
+            ✦ YOUR DIGITAL WORKSPACE
+          </span>
+
+          <h1>Everything you need.<br>
+            <span>In one place.</span>
+          </h1>
+
+          <p>
+            Host images, store documents and access
+            your digital resources through one simple platform.
+          </p>
+
+          <button class="primary-btn" data-page="images">
+            Explore Hosting <span>→</span>
+          </button>
+        </div>
+
+        <div class="hero-visual">
+          <img id="heroImage" src="" alt="Digital workspace">
+          <div class="floating-tag">
+            <span>●</span> Your digital space
+          </div>
+        </div>
+
+        <div class="hero-decoration"></div>
+
+      </section>
+
+      <!-- OVERVIEW -->
+      <section class="section">
+
+        <div class="section-heading">
+          <div>
+            <span class="section-label">OVERVIEW</span>
+            <h2>Your workspace</h2>
+            <p>Everything organized for easy access.</p>
+          </div>
+        </div>
+
+        <div class="stats-grid">
+
+          <div class="stat-card">
+            <div class="stat-icon blue">▧</div>
+            <div>
+              <span>Hosted Images</span>
+              <h3>--</h3>
+              <small>Awaiting connection</small>
+            </div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-icon purple">▤</div>
+            <div>
+              <span>Documents</span>
+              <h3>--</h3>
+              <small>Awaiting connection</small>
+            </div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-icon cyan">☁</div>
+            <div>
+              <span>Storage Used</span>
+              <h3>--</h3>
+              <small>Awaiting connection</small>
+            </div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-icon orange">✧</div>
+            <div>
+              <span>AI Assistant</span>
+              <h3>Ready</h3>
+              <small>API integration pending</small>
+            </div>
+          </div>
+
+        </div>
+
+      </section>
+
+      <!-- SERVICES -->
+      <section class="section">
+
+        <div class="section-heading services-heading">
+          <div>
+            <span class="section-label">OUR SERVICES</span>
+            <h2>Explore your tools</h2>
+            <p>Choose a service to get started.</p>
+          </div>
+
+          <div class="search-box">
+            <span>⌕</span>
+            <input type="search" id="serviceSearch"
+              placeholder="Search services...">
+          </div>
+        </div>
+
+        <div class="services-grid">
+
+          <article class="service-card" data-search="image hosting photos pictures">
+            <div class="service-image">
+              <img data-asset="imageHosting" alt="Image hosting">
+              <span class="service-number">01</span>
+            </div>
+
+            <div class="service-body">
+              <div class="service-icon blue">▧</div>
+              <h3>Image Hosting</h3>
+              <p>Upload and host images. Get direct URLs for your HTML websites.</p>
+              <button class="service-btn" data-page="images">
+                Open Image Hosting →
+              </button>
+            </div>
+          </article>
+
+          <article class="service-card" data-search="document hosting pdf files downloads">
+            <div class="service-image">
+              <img data-asset="documentHosting" alt="Document hosting">
+              <span class="service-number">02</span>
+            </div>
+
+            <div class="service-body">
+              <div class="service-icon purple">▤</div>
+              <h3>Document Hosting</h3>
+              <p>Store documents and generate shareable download URLs.</p>
+              <button class="service-btn" data-page="documents">
+                Open Document Hosting →
+              </button>
+            </div>
+          </article>
+
+          <article class="service-card" data-search="ai assistant chatbot artificial intelligence">
+            <div class="service-image">
+              <img data-asset="aiAssistant" alt="AI assistant">
+              <span class="service-number">03</span>
+            </div>
+
+            <div class="service-body">
+              <div class="service-icon cyan">✧</div>
+              <h3>AI Assistant</h3>
+              <p>Chat with your own AI assistant through an API connection.</p>
+              <button class="service-btn" data-page="ai">
+                Open AI Assistant →
+              </button>
+            </div>
+          </article>
+
+          <article class="service-card" data-search="file manager management">
+            <div class="service-image">
+              <img data-asset="fileManager" alt="File manager">
+              <span class="service-number">04</span>
+            </div>
+
+            <div class="service-body">
+              <div class="service-icon orange">▣</div>
+              <h3>File Manager</h3>
+              <p>Manage, organize and access your hosted files.</p>
+              <button class="service-btn" data-page="manager">
+                Open File Manager →
+              </button>
+            </div>
+          </article>
+
+        </div>
+
+        <p class="no-results" id="noResults" hidden>
+          No matching services found.
+        </p>
+
+      </section>
+
+      <!-- BOTTOM BANNER -->
+      <section class="bottom-banner">
+        <div>
+          <span class="section-label">ALONG DIGITAL</span>
+          <h2>Your files. Your links. Your digital space.</h2>
+          <p>A simple home for your digital resources.</p>
+        </div>
+        <div class="banner-icon">☁</div>
+      </section>
+
+      <footer class="footer">
+        <span>© 2026 Along Digital. All rights reserved.</span>
+        <span>Designed by Along Digital</span>
+      </footer>
+
+    </section>
+
+  </main>
+
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script src="assets.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
