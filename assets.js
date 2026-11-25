@@ -82,7 +82,7 @@ const ASSETS = {
 
     // AI ASSISTANT
     ai: {
-      endpoint: ""
+      endpoint: "AQ.Ab8RN6JdUeCQ7-Ci63N8j2hP0TLmPGyk1jVnFfFMZDfKKTHC9w"
     }
 
   },
