@@ -70,7 +70,7 @@ const ASSETS = {
     // GOOGLE SHEETS TRACKING
     googleSheets: {
 
-      webAppURL: "",
+      webAppURL: "https://script.google.com/macros/s/AKfycbyrpZfoVh9p2sLYi8Q7zYLDoFIVQ7kK2nnaXSjaoF71vS2AwrI4DTOeo_RmTFfHl3RW2g/exec",
 
       sheets: {
         images: "images",
